@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    /*OBJECT LITERAL*/
+        
+        let person={ fname:"Likitha",
+                     lname:"Pinisetti",
+                     sno:13
+
+                    };
+        person.sno=14
+        // to print single key value pair
+        document.write("sno:"+person.sno)
+
+        // to print entire set
+        for( let key in person){
+        document.write(key+":"+person[key]+"<br>")
+         }
+   
+     /*OBJECT NEW REFERENCE*/
+
+      let person1=new Object();
+        person1.fname="Likitha",
+        person1.lname="Pinisetti",
+        person1.sno=13
+
+        document.write(person1.fname)
+        for( let key1 in person1){
+        document.write(key1+":"+person1[key1]+"<br>")
+         }
+ 
+     /*FUNCTIONAL CONSTRUCTOR*/
+      function person2(fname,lname,sno){
+          this.fname=fname;
+          this.lname=lname;
+          this.sno=sno;
+
+      }
+      let p1=new person2("Likitha", "Pinisetti",13)
+      let p2=new person2("Susmitha", "Komaravalli",14)
+      let p3=new person2("Vijaya", "Peddinti",15)
+    
+
+        document.write(p2.fname)
+        for( let key1 in p3){
+        document.write(key1+":"+p3[key1]+"<br>")
+         }
+         let per=[p1,p2,p3];
+         for (let p of per){
+            if(p.sno>13){
+                for (let key in p){
+                    document.write(key+":"+p[key]+"<br>")   
+                }
+                document.write("<br>")
+            }
+         }
+    </script>
+</body>
+</html>

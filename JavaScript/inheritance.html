@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class drf{
+            fullstack(){
+                document.write("Parent fullstack developer <br>");
+            }
+
+        }
+        class techjobs extends drf{
+          
+            fullstack(){
+                document.write("child fullstack developer <br>");
+            }
+        }
+            var obj1=new drf();  //Parent fullstack developer
+            obj1.fullstack();
+
+            var obj2=new techjobs();  //child fullstack developer
+            obj2.fullstack();
+
+
+
+            // OVERRIDING
+
+            var obj=[new techjobs(), new drf()];  //to access both classes
+            obj.forEach((x)=>
+             {x.fullstack();                   //child fullstack developer  Parent fullstack developer
+               });
+
+        
+    </script>
+</body>
+</html>

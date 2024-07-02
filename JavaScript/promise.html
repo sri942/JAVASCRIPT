@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userage=parseInt(prompt("Enter ur age"))
+        let checkage=new Promise((resolve, reject)=>
+       { if(userage>18){
+            resolve("Eligible to vote <br>")
+        }
+        else{
+          
+            reject("Not Eligible to vote<br>")
+        }
+       }
+    );
+    checkage
+          .then((msg)=>document.write(msg))
+          .catch((msg)=>document.write(msg))
+          .finally((msg)=>document.write("Vote Eligibility"))
+    </script>
+</body>
+</html>

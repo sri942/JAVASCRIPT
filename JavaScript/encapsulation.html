@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    class drf{
+        constructor(){
+            var fsd;
+            var ds;
+        }
+        setFSD(fsd){
+            this.fsd=fsd;
+        }
+        getFSD(){
+            return this.fsd+"<br>";
+        }
+        setDS(ds){
+            this.ds=ds;
+        }
+        getDS(){
+            return this.ds;
+        }
+        }
+
+       var obj=new drf();
+       obj.setFSD("FullStack");
+       document.write(obj.getFSD());
+
+    
+       obj.setDS("DataScience");
+       document.write(obj.getDS());
+
+    
+   </script> 
+</body>
+</html>

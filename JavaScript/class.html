@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class drf{  //class
+            constructor(firstName,lastName, rollNo){   //constructor
+                this.firstName=firstName;
+                this.lastName=lastName;
+                this.rollNo=rollNo;
+
+            }
+            getFullDetails(){
+                return this.firstName+" "+this.lastName+" "+this.rollNo;
+            }
+            
+        }
+        var std1=new drf("Likitha","Pinisetti",1);
+            document.write(std1.getFullDetails()+"<br>");
+    </script>
+</body>
+</html>

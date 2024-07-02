@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .container{
+        background-image: url('https://wallpapercave.com/wp/wp2205988.jpg');
+        height: 600px;
+        width:  600px;
+        margin-left: 500px;
+        margin-right: 300px;
+        margin-top: 50px; 
+
+    }
+    form {
+        border: 2px solid black;
+         margin-left:100px;
+        /* margin-right: 500px;*/ 
+        margin-top: 100px; 
+       z-index: 4;
+       position:absolute;
+       background-color: beige;
+       width:400px;
+    }
+
+    
+</style>
+
+<body>
+    
+    <div class="container">
+       
+             <div class="form1">
+                <form action="">
+                    <table cellpadding="15">
+
+
+                        <tr>
+                            <td> <label for="">User Name</label></td>
+                            <td> <input type="text" id="uname" required></td>
+
+                        </tr>
+                        <tr>
+
+                            <td> <label for="">Amount</label< /td>
+                            <td> <input type="text" id="amt"></td>
+
+                        </tr>
+                        <br>
+                        <tr>
+
+                            <td> <label for="">Age</label></td>
+                            <td> <input type="text" id="age"></td>
+
+                        </tr>
+                        <br>
+                        <tr>
+
+                            <td> <label for="">Tenure</label></td>
+                            <td> <input type="text" id="tenu"></td>
+
+                        </tr>
+                        <tr>
+                            <td> <button type="submit" id="submitbtn">Submit</button></td>
+
+                        </tr>
+                        <tr>
+                            <label for="" id="result"></label>
+                        </tr>
+
+                    </table>
+                
+                </form>
+             
+            
+             </div>
+    </div>
+    <script>
+        document.getElementById("submitbtn").addEventListener("click", (e) => {
+            var urname = document.getElementById("uname").value;
+            var amount = parseInt(document.getElementById("amt").value);
+            var age = parseInt(document.getElementById("age").value);
+            var tenure = parseInt(document.getElementById("tenu").value);
+            var ma;
+            var rate;
+
+            if (age > 60) {
+                rate = 8;
+            }
+            else if (age > 40 && age <= 60) {
+                rate = 7;
+            }
+            else {
+                rate = 6;
+            }
+
+
+            var si = parseInt((amount * tenure * rate) / 100);
+            var l = parseInt(amount + si);
+            if (tenure > 4) {
+                ma = l - (0.05 * l);
+                document.getElementById("result").innerHTML = "Hey " + urname + "maturity amount is " + ma;
+            }
+            else {
+                ma = l;
+                document.getElementById("result").innerHTML = "Hey " + urname + "maturity amount is " + ma;
+            }
+
+            e.preventDefault();
+        })
+
+    </script>
+</body>
+
+</html>

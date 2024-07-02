@@ -1,0 +1,37 @@
+<!--print student details who got highest marks, create objects using class-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function student(stdName, stdId, marks, branch)
+        {this.stdName=stdName;
+            this.stdId=stdId;
+            this.marks=marks;
+            this.branch=branch;
+        }
+        let s1=new student("Camelia", 1, 95, "CSE")
+        let s2=new student("Alexa", 2, 93, "ECE")
+        let s3=new student("Elsa", 3, 94, "CSE")
+        let s4=new student("Annie", 4, 92, "EEE")
+        let s5=new student("Clara", 5, 96, "Mech")
+
+        let std=[s1,s2,s3,s4,s5]
+        for(let s of std){
+            let big=95
+            if(s.marks>big)
+             { 
+            for(let key in s){
+               document.write(key+":"+s[key]+"<br>")
+            }
+        document.write("<br>")
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person(name, age, isAdult){
+            this.name=name;
+            this.age=age;
+            this.isAdult=isAdult;
+        }
+        let p1=new person("John",17);
+        let p2=new person("Jane",18);
+        let p3=new person("Jack",19);
+
+         let persons=[p1,p2,p3]
+        // for (let key in persons){
+        //    p1.isAdult="true"
+        //  }
+       
+        // let m=persons.map((a)=>{
+        //     if(age>18){
+        //         return true;
+        //     }
+        //     else{
+        //         return false;
+        //     }
+           
+        // })
+        for(let key in persons){
+            document.write(key+":"+m[key]+)
+        }
+        document.write("<br>")
+    </script>
+</body>
+</html>

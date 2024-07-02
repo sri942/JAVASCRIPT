@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*SUM OF EVEN NUMBERS IN AN ARRAY WITH OUT USING CONTROL LOOPS*/
+        let arr=[6,7,9,4,2,8]
+        let arr1=arr.filter(a=>(a%2==0)).reduce((a,b)=>(a+b))  
+        document.write(arr1+"<br>")
+
+       /*Print an array consisting values >18*/
+       
+        let arr2=[16,27,9,43,25,38]
+        let arr3=arr2.filter(a=>(a>18))  
+        document.write(arr3+"<br>")
+
+          //OR
+
+        arr4=[];
+        for (let a of arr2)
+        {
+            if(a>18){
+                arr4.push(a);
+            }
+        }
+        document.write(arr4)
+    </script>
+</body>
+</html>
